@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    'https://server2-efrat.onrender.com',
+    'http://localhost:4444',
     'http://localhost:3000',
     'http://localhost:3001',
 ]
