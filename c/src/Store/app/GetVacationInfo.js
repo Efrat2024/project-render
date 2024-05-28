@@ -29,7 +29,7 @@ const Info = () => {
 
     const itemTemplate = (item) => (
         <img
-            src={item ? `https://server2-efrat.onrender.com/uploads/${item.split("\\")[2]}` : ""}
+            src={item ? `http://localhost:4444/uploads/${item.split("\\")[2]}` : ""}
             alt="Gallery"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
@@ -37,7 +37,7 @@ const Info = () => {
 
     const thumbnailTemplate = (item) => (
         <img
-            src={item ? `https://server2-efrat.onrender.com/uploads/${item.split("\\")[2]}` : ""}
+            src={item ? `http://localhost:4444/uploads/${item.split("\\")[2]}` : ""}
             alt={item}
             style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover'}}
         />
@@ -74,7 +74,7 @@ const Info = () => {
     const itemTemplate2 = (item) => {
         return (<>
             <div className="flex flex-wrap p-2 align-items-center gap-3">
-                <img className="w-4rem shadow-2 flex-shrink-0 border-round" src={"https://server2-efrat.onrender.com/uploads/"+findImgByVacationId(item?.vacations)?.split("\\")[2]}   />
+                <img className="w-4rem shadow-2 flex-shrink-0 border-round" src={"http://localhost:4444/uploads/"+findImgByVacationId(item?.vacations)?.split("\\")[2]}   />
                 <div className="flex-1 flex flex-column gap-2 xl:mr-8">
                     <span className="font-bold">{findNameByVacationId(item.vacations)}</span>
                     <div className="flex align-items-center gap-2">

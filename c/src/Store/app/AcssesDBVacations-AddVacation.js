@@ -33,7 +33,7 @@ export default function BasicCardVacation(props) {
 
   const [{ data, loading, error }, refetch] = useAxios(
     {
-      url: 'https://server2-efrat.onrender.com/api/vacation',
+      url: 'http://localhost:4444/api/vacation',
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -76,7 +76,7 @@ export default function BasicCardVacation(props) {
   //     })
 
   //     console.log("formData ", formData);
-  //     await Axios.post(`https://server2-efrat.onrender.com/api/vacation`, formData, {
+  //     await Axios.post(`http://localhost:4444/api/vacation`, formData, {
   //       headers: {
   //         'Content-Type': 'multipart/form-data'
   //       }
@@ -159,7 +159,7 @@ export default function BasicCardVacation(props) {
               size="small"
               onClick={async () => {
                 try {
-                  await Axios.delete(`https://server2-efrat.onrender.com/api/vacation`, {
+                  await Axios.delete(`http://localhost:4444/api/vacation`, {
                     data: { _id: i._id },
                     headers:{
                       authorization:"Bearer "+localStorage.getItem("token")
@@ -263,7 +263,7 @@ export default function BasicCardVacation(props) {
                   <Button onClick={async()=>{
                                 const res = await Axios({
                             // Endpoint to send files
-                            url: "https://server2-efrat.onrender.com/api/vacation/deleteImageFromImages",
+                            url: "http://localhost:4444/api/vacation/deleteImageFromImages",
                             method: "DELETE",
                             headers: {
                             // Add any auth token here
@@ -300,7 +300,7 @@ export default function BasicCardVacation(props) {
                    
                     const res = await Axios({
                       // Endpoint to send files
-                      url: "https://server2-efrat.onrender.com/api/vacation",
+                      url: "http://localhost:4444/api/vacation",
                       method: "PUT",
                       headers: {
                       // Add any auth token here
@@ -421,7 +421,7 @@ export default function BasicCardVacation(props) {
             console.log("postpost p");
             const res = await Axios({
               // Endpoint to send files
-              url: "https://server2-efrat.onrender.com/api/vacation",
+              url: "http://localhost:4444/api/vacation",
               method: "POST",
               headers: {
               // Add any auth token here

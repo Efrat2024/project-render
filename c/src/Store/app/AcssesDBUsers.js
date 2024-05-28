@@ -57,7 +57,7 @@ export default function Users() {
     const UserArr = useSelector(myStore => myStore.UserSlice.UserArr)
 
     const [{ data, loading, error }, refetch] = useAxios({
-        url:`https://server2-efrat.onrender.com/api/user`,
+        url:`http://localhost:4444/api/user`,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -95,7 +95,7 @@ export default function Users() {
     };
 
     const handleDeleteClick = (id) => () => {
-        deleteItem("https://server2-efrat.onrender.com/api/user/", { data: { id: id } })
+        deleteItem("http://localhost:4444/api/user/", { data: { id: id } })
         refetch();
     };
 
@@ -115,14 +115,14 @@ export default function Users() {
 
         const editedRow = data.find((row) => row._id == newRow.id);
         if (editedRow) {
-            deleteItem("https://server2-efrat.onrender.com/api/user/", { data: { id: editedRow._id } })
+            deleteItem("http://localhost:4444/api/user/", { data: { id: editedRow._id } })
             refetch();
 
         }
 
 
 
-        await create('https://server2-efrat.onrender.com/api/user/', {  name: newRow.name, username: newRow.username, email: newRow.email, phone: newRow.phone } )
+        await create('http://localhost:4444/api/user/', {  name: newRow.name, username: newRow.username, email: newRow.email, phone: newRow.phone } )
         refetch()
    
 

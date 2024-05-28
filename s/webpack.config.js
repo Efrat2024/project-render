@@ -2,16 +2,21 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './index.js',  // Update the entry point based on your project structure
+  entry: './server.js',  // Update the entry point to server.js
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
+  resolve: {
+    fallback: {
+      "path": require.resolve("path-browserify")
+    }
+  },
   module: {
     rules: [
       {
-        test: "/\.js$/",
-        exclude: "/node_modules/",
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {

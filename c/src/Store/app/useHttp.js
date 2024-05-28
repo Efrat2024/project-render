@@ -21,7 +21,7 @@ const DispatchData = (path, data) => {
 
 export const get = async (path) => {
   try {
-    const res = await axios.get({url:`https://server2-efrat.onrender.com/api/${path}`,
+    const res = await axios.get({url:`http://localhost:4444/api/${path}`,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",

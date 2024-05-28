@@ -27,7 +27,7 @@ const GetAllVacationListList = (props) => {
             <div className="col-12" key={vacation?._id}>
                 <div className={classNames('flex flex-column xl:flex-row xl:align-items-start p-4 gap-4', { 'border-top-1 surface-border': index !== 0 })}>
 
-                    <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://server2-efrat.onrender.com/${vacation?.image}`} alt={vacation?.name} />
+                    <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`http://localhost:4444/${vacation?.image}`} alt={vacation?.name} />
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
                         <div className="flex flex-column align-items-center sm:align-items-start gap-3">
                             <div className="text-2xl font-bold text-900">{vacation?.name}</div>
@@ -79,7 +79,7 @@ const GetAllVacationListList = (props) => {
                         </div>
                     </div>
                     <div className="flex flex-column align-items-center gap-3 py-5">
-                        <img className="w-9 shadow-2 border-round" src={`https://server2-efrat.onrender.com/${vacation?.image}`} alt={vacation?.name} />
+                        <img className="w-9 shadow-2 border-round" src={`http://localhost:4444/${vacation?.image}`} alt={vacation?.name} />
                         <div className="text-2xl font-bold text-900">{vacation?.name}</div>
                         <div className="text-xl font-bold ">{vacation?.description}</div>
                     </div>

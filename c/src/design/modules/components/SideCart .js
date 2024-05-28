@@ -112,7 +112,7 @@ const SideCart  = () => {
     const itemTemplate = (item) => {
         return (<>
             <div className="flex flex-wrap p-2 align-items-center gap-3">
-                <img className="w-4rem shadow-2 flex-shrink-0 border-round" src={"https://server2-efrat.onrender.com/uploads/"+findImgByVacationId(item.vacations).split("\\")[2]}   />
+                <img className="w-4rem shadow-2 flex-shrink-0 border-round" src={"http://localhost:4444/uploads/"+findImgByVacationId(item.vacations).split("\\")[2]}   />
                 <div className="flex-1 flex flex-column gap-2 xl:mr-8">
                     <span className="font-bold">{findNameByVacationId(item.vacations)}</span>
                     <div className="flex align-items-center gap-2">

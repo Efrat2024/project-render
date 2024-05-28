@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://server2-efrat.onrender.com",
+        baseUrl: "http://localhost:4444",
         credentials: 'include',
         prepareHeaders: (headers, { getState }) => {
            

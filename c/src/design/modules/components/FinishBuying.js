@@ -8,7 +8,7 @@ function FinishBuying(props) {
   const { _id: userId, firstname, lastname } = useAuth()
   const [{ data, loading, error}, refetch] = useAxios(
     {
-      url: `https://server2-efrat.onrender.com/api/user/${userId}`,
+      url: `http://localhost:4444/api/user/${userId}`,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",

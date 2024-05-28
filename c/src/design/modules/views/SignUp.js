@@ -24,7 +24,7 @@ function SignUp() {
   const [registerFunc, { isErrorReg, isSuccessReg, isLoadingReg, dataReg, errorReg }] = useRegisterMutation()
   const [{ data: dataUsers, loading, error: error2 }, refetch] = useAxios(
     {
-      url: 'https://server2-efrat.onrender.com/api/user',
+      url: 'http://localhost:4444/api/user',
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
